@@ -1,0 +1,18 @@
+.events-archive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  height: 80vh;
+  width: 100vw;
+  position: absolute;
+  margin-top: 10vh;
+  padding-bottom: 35vh;
+  img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}

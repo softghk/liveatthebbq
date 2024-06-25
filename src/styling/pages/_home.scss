@@ -1,0 +1,26 @@
+.home {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.home-video {
+  position: relative;
+  height: 73vh;
+  width: 100%;
+  filter: blur(2px);
+  &:hover {
+    filter: blur(0);
+  }
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .home-video {
+    height: 65vh;
+  }
+}
+

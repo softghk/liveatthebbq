@@ -1,0 +1,137 @@
+.single-item {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+
+  .left, .right {
+    width: 50%;
+    height: 100%;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .back {
+      font-size: 1rem;
+    }
+  }
+
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .socials {
+    font-size: 3rem;
+    display: flex;
+    gap: 40px;
+    a {
+      color: #BE8A55;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .text-container {
+    width: 80%;
+    height: 70vh;
+    align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    padding-right: 60px;
+
+    h1 {
+      margin-bottom: 0
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: white;
+      }
+    }
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: black;
+      border: 1px solid #BE8A55;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-button {
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background-color: #BE8A55;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background-color: black;
+    }
+  }
+
+  .media-container {
+    position: relative;
+    img, video {
+      width: 100%;
+      // Height is 73vh because navbar + music player is 27vh in total
+      height: 73vh;
+      object-fit: cover;
+      filter: opacity(0.9) brightness(0.8);
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .single-item {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    .left, .right {
+      width: 100%;
+    }
+    .text-container {
+      height: 100%;
+      width: 100%;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .title-container {
+      margin-top: 20px;
+      h1 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .back {
+      display: none;
+    }
+    .media-container {
+      img, video {
+        object-position: center center;
+      }
+    }
+  }
+}

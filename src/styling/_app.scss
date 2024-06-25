@@ -1,0 +1,104 @@
+@import "common/colors";
+@import "common/fonts";
+
+@import "components/_navbar.scss";
+@import "components/_musicplayer.scss";
+@import "components/_grid.scss";
+@import "components/_singleItem.scss";
+@import "components/_loading-error.scss";
+
+@import "pages/_about.scss";
+@import "pages/_home.scss";
+@import "pages/_videos.scss";
+@import "pages/_splash.scss";
+@import "pages/_events.scss";
+@import "pages/_contact.scss";
+@import "pages/_mix.scss";
+@import "pages/_mixes.scss";
+@import "pages/_play.scss";
+
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+html {
+  max-height: 100vh;
+  overflow: scroll;
+  background-color: black;
+}
+
+body, a {
+  color: #BE8A55FF;
+  font-family: "Jura", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 40px;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.content-container {
+  padding-top: 15vh;
+  height: 73vh;
+  position: relative;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.route-container {
+  width: 100%;
+}
+
+.page-container.fade-in {
+  opacity: 1;
+}
+
+.content-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .content-container {
+    height: auto;
+    overflow-x: hidden;
+    padding-bottom: 20vh;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .content-container {
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
